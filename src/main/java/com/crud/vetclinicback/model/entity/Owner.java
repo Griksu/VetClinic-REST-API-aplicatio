@@ -3,6 +3,7 @@ package com.crud.vetclinicback.model.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +17,7 @@ public class Owner {
 
     @Id
     @GeneratedValue
-    @NonNull
+    @NotNull
     @Column(name = "ID", unique = true)
     private Long id;
 

@@ -4,7 +4,6 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.time.LocalDate;
 import java.util.List;
 
 @Getter
@@ -12,8 +11,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "PETS")
-public class Pet {
+@Table(name = "VETS")
+public class Vet {
 
     @Id
     @GeneratedValue
@@ -21,23 +20,19 @@ public class Pet {
     @Column(name = "ID", unique = true)
     private Long id;
 
-    @Column(name = "PET_NAME")
-    private String petName;
+    @Column(name = "FIRSTNAME")
+    private String firstname;
 
-    @Column(name = "BIRTH_DATE")
-    private LocalDate birthDate;
-
-    @ManyToOne
-    @JoinColumn(name = "OWNER_ID")
-    private Owner owner;
+    @Column(name = "LASTNAME")
+    private String lastname;
 
     @ManyToOne
-    @JoinColumn(name = "TYPE_ID")
-    private PetType petType;
+    @JoinColumn(name = "SPEC_ID")
+    private Specialisation specialisation;
 
     @OneToMany(
             targetEntity = Visit.class,
-            mappedBy = "pet",
+            mappedBy = "vet",
             cascade = CascadeType.PERSIST,
             fetch = FetchType.LAZY
     )
