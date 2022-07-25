@@ -2,6 +2,7 @@ package com.crud.vetclinicback.model.dto;
 
 import com.crud.vetclinicback.model.entity.Owner;
 import com.crud.vetclinicback.model.entity.PetType;
+import com.crud.vetclinicback.model.entity.Visit;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -16,5 +17,5 @@ public class PetDto {
     private LocalDate birthDate;
     private Owner owner;
     private PetType petType;
-    //private List<Visit> visits;
+    private List<Visit> visits;
 }

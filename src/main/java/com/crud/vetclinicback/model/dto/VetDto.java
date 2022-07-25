@@ -1,6 +1,7 @@
 package com.crud.vetclinicback.model.dto;
 
 import com.crud.vetclinicback.model.entity.Specialisation;
+import com.crud.vetclinicback.model.entity.Visit;
 import lombok.*;
 
 import java.util.List;
@@ -13,5 +14,5 @@ public class VetDto {
     private String firstname;
     private String lastname;
     private Specialisation specialisation;
-    //private List<Visit> visits;
+    private List<Visit> visits;
 }
