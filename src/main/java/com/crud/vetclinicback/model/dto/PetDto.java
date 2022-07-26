@@ -15,7 +15,7 @@ public class PetDto {
     private Long id;
     private String petName;
     private LocalDate birthDate;
-    private Owner owner;
-    private PetType petType;
+    private Long ownerId;
+    private Long petTypeId;
     private List<Visit> visits;
 }

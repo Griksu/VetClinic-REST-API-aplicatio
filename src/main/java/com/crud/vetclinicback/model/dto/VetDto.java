@@ -13,6 +13,6 @@ public class VetDto {
     private Long id;
     private String firstname;
     private String lastname;
-    private Specialisation specialisation;
+    private Long specialisationId;
     private List<Visit> visits;
 }

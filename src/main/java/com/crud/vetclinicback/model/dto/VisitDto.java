@@ -13,7 +13,7 @@ public class VisitDto {
     private Long id;
     private String visitDescription;
     private LocalDate visitDate;
-    private Pet pet;
-    private Vet vet;
+    private Long petId;
+    private Long vetId;
 
 }
