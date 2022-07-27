@@ -1,6 +1,5 @@
 package com.crud.vetclinicback.model.dto;
 
-import com.crud.vetclinicback.model.entity.Vet;
 import lombok.*;
 
 import java.util.List;
@@ -11,5 +10,5 @@ import java.util.List;
 public class SpecialisationDto {
     private Long id;
     private String specName;
-    private List<Vet> vets;
+    private List<VetDto> vets;
 }

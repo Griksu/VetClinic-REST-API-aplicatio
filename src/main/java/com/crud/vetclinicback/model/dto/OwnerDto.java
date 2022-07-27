@@ -1,6 +1,5 @@
 package com.crud.vetclinicback.model.dto;
 
-import com.crud.vetclinicback.model.entity.Pet;
 import lombok.*;
 
 import java.util.List;
@@ -15,5 +14,5 @@ public class OwnerDto {
     private String address;
     private String city;
     private String phone;
-    private List<Pet> pets;
+    private List<PetDto> pets;
 }

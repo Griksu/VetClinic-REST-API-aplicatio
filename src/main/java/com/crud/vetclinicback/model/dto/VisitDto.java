@@ -1,7 +1,5 @@
 package com.crud.vetclinicback.model.dto;
 
-import com.crud.vetclinicback.model.entity.Pet;
-import com.crud.vetclinicback.model.entity.Vet;
 import lombok.*;
 
 import java.time.LocalDate;
