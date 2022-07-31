@@ -46,7 +46,8 @@ public class OwnerController {
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Void> createOwner(@RequestBody OwnerDto ownerDto) throws PetNotFoundException {
+    public ResponseEntity<Void> createOwner(@RequestBody OwnerDto ownerDto) throws
+            PetNotFoundException {
         Owner owner = ownerMapper.mapToOwner(ownerDto);
         ownerDBService.saveOwner(owner);
         return ResponseEntity.ok().build();

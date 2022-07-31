@@ -39,7 +39,7 @@ public class PetTypeController {
 
     @PutMapping
     public ResponseEntity<PetTypeDto> updatePetType(@RequestBody PetTypeDto petTypeDto) throws
-            PetTypeNotFoundException, PetNotFoundException {
+            PetNotFoundException {
         PetType petType = petTypeMapper.mapToPetType(petTypeDto);
         PetType savedPetType = petTypeDBService.savePetType(petType);
         return ResponseEntity.ok(petTypeMapper.mapToPetTypeDto(savedPetType));
@@ -47,7 +47,7 @@ public class PetTypeController {
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Void> createPetType(@RequestBody PetTypeDto petTypeDto) throws
-            PetTypeNotFoundException {
+            PetNotFoundException {
         PetType petType = petTypeMapper.mapToPetType(petTypeDto);
         petTypeDBService.savePetType(petType);
         return ResponseEntity.ok().build();
